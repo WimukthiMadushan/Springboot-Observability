@@ -1,6 +1,8 @@
 package com.programming.techie.loans.repository;
 
 import com.programming.techie.loans.entity.Loan;
+
+import io.micrometer.observation.annotation.Observed;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -13,6 +15,7 @@ import java.util.UUID;
 
 @Repository
 @RequiredArgsConstructor
+@Observed
 public class LoanRepository {
 
     private final JdbcClient jdbcClient;
